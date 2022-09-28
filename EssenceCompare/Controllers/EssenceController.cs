@@ -8,17 +8,9 @@ namespace EssenceCompare.Controllers
         // 
         // GET: /Essence/
 
-        public string Index()
+        public IActionResult Index()
         {
-            return "This is my default action...";
-        }
-
-        // 
-        // GET: /Essence/Welcome/ 
-
-        public string Welcome(string name, int ID = 1)
-        {
-            return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");
+            return View();
         }
     }
 }

@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\cleme\OneDrive\Documents\Cours\CESI\.Net\EssenceCompare\EssenceCompare
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/cleme/OneDrive/Documents/Cours/CESI/.Net/EssenceCompare/EssenceCompare/Views/Essence/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNzZW5jZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/cleme/OneDrive/Documents/Cours/CESI/.Net/EssenceCompare/EssenceCompare/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
