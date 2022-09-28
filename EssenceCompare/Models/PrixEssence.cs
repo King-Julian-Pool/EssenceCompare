@@ -3,7 +3,7 @@
     public class PrixEssence
     {
 
-        public int Id { get; set; }
+        public long Id { get; set; }
         public double PrixValeur { get; set; }
         public string? PrixNom { get; set; }
         public DateTime PrixMaj { get; set; }
