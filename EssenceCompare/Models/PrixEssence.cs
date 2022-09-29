@@ -13,8 +13,32 @@
         public string? reg_name { get; set; }
         public string? services_service { get; set; }
         public string? horaires { get; set; }
-        public string[]? geom { get; set; }
+        public string? geom { get; set; }
+
+        public PrixEssence(long id, double prix_valeur, string? prix_nom, DateTime prix_maj, string? adresse, string? cp, string? ville, string? dep_name, string? reg_name, string? services_service, string? horaires, string[]? geom)
+        {
+            this.id = id;
+            this.prix_valeur = prix_valeur;
+            this.prix_nom = prix_nom;
+            this.prix_maj = prix_maj;
+            this.adresse = adresse;
+            this.cp = cp;
+            this.ville = ville;
+            this.dep_name = dep_name;
+            this.reg_name = reg_name;
+            this.services_service = services_service;
+            this.horaires = horaires;
+
+            if (geom != null)
+            {
+                this.geom = String.Join(",", geom);
+            }
+            else
+            {
+                this.geom = null;
+            }
         }
+    }
 
     public class Root
     {
