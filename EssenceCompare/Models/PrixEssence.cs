@@ -31,7 +31,7 @@
 
             if (geom != null)
             {
-                this.geom = String.Join(",", geom);
+                this.geom = String.Join(", ", geom);
             }
             else
             {

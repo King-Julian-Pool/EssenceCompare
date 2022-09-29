@@ -11,7 +11,7 @@ namespace EssenceCompare.Controllers
         {
             
             var client = new HttpClient();
-            var stringTask = client.GetStringAsync("https://data.opendatasoft.com/api/records/1.0/search/?dataset=prix-carburants-fichier-instantane-test-ods-copie%40opendatamef&q=bolbec");
+            var stringTask = client.GetStringAsync("https://data.opendatasoft.com/api/records/1.0/search/?dataset=prix-carburants-fichier-instantane-test-ods-copie%40opendatamef&q=ville+%3D+bolbec+%26+prix_nom+%3D+gazole");
 
             var msg = await stringTask;
 

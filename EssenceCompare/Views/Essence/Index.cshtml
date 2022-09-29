@@ -2,7 +2,7 @@
     ViewData["Title"] = "Prix de l'essence";
 }
 
-<h1>Essence</h1>
+<h1>Prix du Gazole à Bolbec</h1>
 
 @if (ViewData["prixEssences"] != null)
 {
@@ -17,6 +17,7 @@
                 <h5 class="card-title">@prixEssence.prix_nom</h5>
                 <h6 class="card-subtitle mb-2 text-muted">@prixEssence.prix_valeur</h6>
                     <p class="card-text">@prixEssence.adresse</p>
+                    <p class="card-text">@prixEssence.cp - @prixEssence.ville</p>
                     <p class="card-text">@prixEssence.geom</p>
                 
             </div>
