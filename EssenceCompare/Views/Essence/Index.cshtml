@@ -3,3 +3,23 @@
 }
 
 <h1>Essence</h1>
+
+@if (ViewData["prixEssences"] != null)
+{
+
+    @foreach (var prixEssence in ViewData["prixEssences"] as List<PrixEssence?>)
+    {
+        @if (prixEssence != null)
+        {
+            
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">@prixEssence.prix_nom</h5>
+                <h6 class="card-subtitle mb-2 text-muted">@prixEssence.prix_valeur</h6>
+                <p class="card-text">@prixEssence.adresse</p>
+            </div>
+        </div>
+        
+        }
+    }
+}

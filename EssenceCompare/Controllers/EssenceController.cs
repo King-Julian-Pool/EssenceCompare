@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EssenceCompare.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
 
 namespace EssenceCompare.Controllers
@@ -8,9 +9,13 @@ namespace EssenceCompare.Controllers
         // 
         // GET: /Essence/
 
-        public IActionResult Index()
+        public  async Task<IActionResult> Index()
         {
-            return View();
+            List<PrixEssence?>? prixEssences =  await ApiGetter.GetEssence();
+
+            ViewData["prixEssences"] = prixEssences;
+            
+            return View();            
         }
     }
 }
