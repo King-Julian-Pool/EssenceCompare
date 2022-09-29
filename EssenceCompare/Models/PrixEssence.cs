@@ -1,4 +1,8 @@
-﻿namespace EssenceCompare.Models
+﻿using MessagePack.Formatters;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Newtonsoft.Json;
+
+namespace EssenceCompare.Models
 {
     public class PrixEssence
     {
@@ -15,6 +19,7 @@
         public string? horaires { get; set; }
         public string? geom { get; set; }
 
+        [JsonConstructor]
         public PrixEssence(long id, double prix_valeur, string? prix_nom, DateTime prix_maj, string? adresse, string? cp, string? ville, string? dep_name, string? reg_name, string? services_service, string? horaires, string[]? geom)
         {
             this.id = id;
@@ -31,13 +36,10 @@
 
             if (geom != null)
             {
-                this.geom = String.Join(", ", geom);
-            }
-            else
-            {
-                this.geom = null;
+                this.geom = String.Join(",", geom);
             }
         }
+
     }
 
     public class Root
